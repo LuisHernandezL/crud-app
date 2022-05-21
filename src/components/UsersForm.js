@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import '../styles/UsersForm.css'
 
 const UsersForm = ({getUsers,selectUser,deselectUser}) => {
     const[name,setName]=useState("");
@@ -58,55 +59,67 @@ const UsersForm = ({getUsers,selectUser,deselectUser}) => {
 
     
     return (
-        <form onSubmit={submit}>
-            <label htmlFor="name">Name</label>
-            <input 
-                type="text" 
-                id='name' 
-                placeholder='Name' 
-                onChange={e => setName(e.target.value)} 
-                value={name}
-            />
+        <div className='form-container'>
+            <form className='form-base' onSubmit={submit}>
+                <div className='form-subPart'>
+                    <label htmlFor="name">Name</label>
+                    <input 
+                        type="text" 
+                        id='name' 
+                        placeholder='Name' 
+                        onChange={e => setName(e.target.value)} 
+                        value={name}
+                    />
+                </div>
 
-            <label htmlFor="lastName">Last Name</label>
-            <input 
-                type="text" 
-                id='lastName'
-                placeholder='Last Name'
-                onChange={e=>setLastName(e.target.value)}
-                value={lastName}
-            />
+                <div className='form-subPart'>
+                    <label htmlFor="lastName">Last Name</label>
+                    <input 
+                        type="text" 
+                        id='lastName'
+                        placeholder='Last Name'
+                        onChange={e=>setLastName(e.target.value)}
+                        value={lastName}
+                    />
+                </div>
 
-            <label htmlFor="email">Email</label>
-            <input 
-                type='email' 
-                id='email'
-                placeholder='Email'
-                onChange={e=>setEmail(e.target.value)}
-                value={email}
-            />
+                <div className='form-subPart'>
+                    <label htmlFor="email">Email</label>
+                    <input 
+                        type='email' 
+                        id='email'
+                        placeholder='Email'
+                        onChange={e=>setEmail(e.target.value)}
+                        value={email}
+                    />
+                </div>
 
-            <label htmlFor="password">Password</label>
-            <input 
-                type="password" 
-                id='password'
-                placeholder='Password'
-                onChange={e=>setPassword(e.target.value)}
-                value={password}
-            />
+                <div className='form-subPart'>
+                    <label htmlFor="password">Password</label>
+                    <input 
+                        type="password" 
+                        id='password'
+                        placeholder='Password'
+                        onChange={e=>setPassword(e.target.value)}
+                        value={password}
+                    />
+                </div>
 
-            <label htmlFor="birthday">Birthday</label>
-            <input 
-                type='date' 
-                id='birthday'
-                onChange={e=>setBirthday(e.target.value)}
-                value={birthday}
-            />
+                <div className='form-subPart'>
+                    <label htmlFor="birthday">Birthday</label>
+                    <input 
+                        type='date' 
+                        id='birthday'
+                        onChange={e=>setBirthday(e.target.value)}
+                        value={birthday}
+                    />
+                </div>
 
-            <button>Submit</button>
-            <button type='button' onClick={deselectUser}>Cancel</button>
+                <button>Submit</button>
+                <button type='button' onClick={deselectUser}>Cancel</button>
 
-        </form>
+            </form>
+        </div>
     );
 };
 
