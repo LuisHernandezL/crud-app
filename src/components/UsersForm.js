@@ -61,6 +61,7 @@ const UsersForm = ({getUsers,selectUser,deselectUser}) => {
     return (
         <div className='form-container'>
             <form className='form-base' onSubmit={submit}>
+                <h1>User Form</h1>
                 <div className='form-subPart'>
                     <label htmlFor="name">Name</label>
                     <input 
@@ -115,8 +116,10 @@ const UsersForm = ({getUsers,selectUser,deselectUser}) => {
                     />
                 </div>
 
-                <button>Submit</button>
-                <button type='button' onClick={deselectUser}>Cancel</button>
+                <div className='buttons-container'>
+                    <button className='button-submit'>Submit</button>
+                    <button className='button-cancel' type='button' onClick={deselectUser}>Cancel</button>
+                </div>
 
             </form>
         </div>
