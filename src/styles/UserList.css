@@ -1,5 +1,5 @@
 .cards-container {
-    padding: 100px;
+    padding: 100px 300px;
     display: flex;
     justify-content: center;
     gap: 3rem;
