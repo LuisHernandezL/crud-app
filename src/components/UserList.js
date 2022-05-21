@@ -7,7 +7,6 @@ const UserList = ({users,editUser,deleteUser}) => {
 
     return (
         <div>
-            <h2>Users List</h2>
                 <div className='cards-container'>
                     {
                         users.map(user => (

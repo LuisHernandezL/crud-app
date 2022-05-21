@@ -22,6 +22,7 @@ function App() {
 
   const editUser = user =>{
     setSelectUser(user)
+    setShowModal(true)
 
   }
 
@@ -33,19 +34,29 @@ function App() {
     axios.delete(`https://users-crud1.herokuapp.com/users/${user.id}/`)
     .then(()=>getUsers())
     
+    
   }
   
+  const [showModal,setShowModal]=useState(false);
+
+  const closeModal = ()=> setShowModal(false)
+
 
   
   
   return (
     <div className="App">
       
-      <UsersForm
+      { showModal && <UsersForm
         getUsers={getUsers}
         selectUser={selectUser}
         deselectUser={deselectUser}
-      />
+        closeModal={closeModal}
+      />}
+      <div className='addUser-button-container'>
+        <h2>Users List</h2>
+        <button onClick={()=>setShowModal(true)} className="addUser-button">Agregar Usuario</button>
+      </div>
 
       <UserList 
         users={users}

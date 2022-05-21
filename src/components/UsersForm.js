@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import '../styles/UsersForm.css'
 
-const UsersForm = ({getUsers,selectUser,deselectUser}) => {
+const UsersForm = ({getUsers,selectUser,deselectUser,closeModal}) => {
     const[name,setName]=useState("");
     const[lastName,setLastName]=useState("");
     const[email,setEmail]=useState("");
@@ -11,6 +11,7 @@ const UsersForm = ({getUsers,selectUser,deselectUser}) => {
 
     const submit = e =>{
         e.preventDefault();
+        closeModal()
         const user = {
             first_name:name,
             last_name:lastName,
@@ -31,6 +32,7 @@ const UsersForm = ({getUsers,selectUser,deselectUser}) => {
         }
 
         clearInput()
+        
     }
 
     useEffect(()=>{
@@ -53,6 +55,7 @@ const UsersForm = ({getUsers,selectUser,deselectUser}) => {
         setEmail("")
         setPassword("")
         setBirthday("")
+        
     }
     
     
@@ -61,6 +64,7 @@ const UsersForm = ({getUsers,selectUser,deselectUser}) => {
     return (
         <div className='form-container'>
             <form className='form-base' onSubmit={submit}>
+               {/*  <button onClick={closeModal}>close</button> */}
                 <h1>User Form</h1>
                 <div className='form-subPart'>
                     <label htmlFor="name">Name</label>
@@ -122,6 +126,7 @@ const UsersForm = ({getUsers,selectUser,deselectUser}) => {
                 </div>
 
             </form>
+            <div className='overlay' onClick={closeModal}></div>
         </div>
     );
 };
