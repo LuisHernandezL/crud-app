@@ -1,7 +1,11 @@
-h1 {
-    padding: 0;
+.title {
+    padding: 0 !important;
     margin: 0;
-}
+    font-size: 2rem;
+    border-bottom: 2px solid black !important;
+    text-align: center;
+    
+  }
 
 .form-container {
     position: fixed;
@@ -20,7 +24,7 @@ h1 {
     background-color: lightslategray;
     border-radius: 5px;
     border: 2px solid rgb(176, 176, 176);
-    box-shadow: 0px 0px 5px 5px rgb(210, 210, 210);
+    box-shadow: 0px 0px 5px 5px rgb(162, 162, 162);
     width: 400px;
     height: 650px;
     display: flex;
@@ -47,11 +51,11 @@ h1 {
     margin-top: 50px;
 }
 .addUser-button{
-    box-shadow: 0px 1px 0px 0px #fff6af;
-	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-	background-color:#ffec64;
+    box-shadow: 0px 1px 0px 0px #c6c6c6;
+	background:linear-gradient(to bottom, #64c9ff 5%, #238aff 100%);
+	background-color:#6498ff;
 	border-radius:6px;
-	border:1px solid #ffaa22;
+	border:1px solid #2252ff;
 	display:inline-block;
 	cursor:pointer;
 	color:#333333;
@@ -60,12 +64,12 @@ h1 {
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
-	text-shadow:0px 1px 0px #ffee66;
+	text-shadow:0px 1px 0px #666eff;
 
 }
 .addUser-button:hover {
-	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
-	background-color:#ffab23;
+	background:linear-gradient(to bottom, #238aff 5%, #64c9ff 100%);
+	background-color:#6498ff;
 }
 .addUser-button:active {
 	position:relative;
@@ -92,18 +96,34 @@ h1 {
 
 
 .button-submit {
+    cursor: pointer;
+    font-weight: 650;
     width: 230px;
+    height: 30px;
+    background:linear-gradient(to bottom, #23ff35 5%, #6eff64 100%);
     background-color: green;
     border: 1px solid lightgreen;
     border-radius: 5px;
     box-shadow: 0px 0px 1px 1px gray;
 }
 
+.button-submit:hover {
+    background:linear-gradient(to bottom, #6cff5f 5%, #37f626 100%);
+}
+
 .button-cancel {
+    cursor: pointer;
+    font-weight: 650;
     margin-left: 10px;
     width: 100px;
+    height: 30px;
+    background:linear-gradient(to bottom, #ff2323 5%, #ff6464 100%);
     background-color: brown;
     border: 1px solid lightcoral;
     border-radius: 5px;
     box-shadow: 0px 0px 1px 1px gray;
+}
+
+.button-cancel:hover {
+    background:linear-gradient(to bottom, #ff5b5b 5%, #ff2222 100%);
 }

@@ -17,7 +17,7 @@ li {
     border: rgb(142, 142, 142);
     box-shadow: 0px 0px 5px 2px rgb(193, 193, 193);
     width: 330px;
-    height: 220px;
+    height: 230px;
 }
 
 .card-name {
@@ -53,6 +53,7 @@ li {
     background-color: rgb(164, 0, 0);
     border: 2px solid rgb(83, 0, 0);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .button-edit {
@@ -61,5 +62,6 @@ li {
     background-color: gray;
     border: 2px solid black;
     border-radius: 5px;
+    cursor: pointer;
     
 }

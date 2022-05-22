@@ -27,7 +27,8 @@ const UsersForm = ({getUsers,selectUser,deselectUser,closeModal}) => {
         }else{
             axios.post('https://users-crud1.herokuapp.com/users/',user)
             .then(()=>getUsers())
-            .catch(error=>console.log(error.response))  
+            .catch(error=>console.log(error.response))
+            alert(`${user.first_name} ${user.last_name} se ha Agregado`)  
                 
         }
 
@@ -65,7 +66,7 @@ const UsersForm = ({getUsers,selectUser,deselectUser,closeModal}) => {
         <div className='form-container'>
             <form className='form-base' onSubmit={submit}>
                {/*  <button onClick={closeModal}>close</button> */}
-                <h1>User Form</h1>
+                <h1 className='title'>User Form</h1>
                 <div className='form-subPart'>
                     <label htmlFor="name">Name</label>
                     <input 

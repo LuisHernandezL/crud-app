@@ -33,7 +33,7 @@ function App() {
   const deleteUser = user =>{
     axios.delete(`https://users-crud1.herokuapp.com/users/${user.id}/`)
     .then(()=>getUsers())
-    
+    alert(`${user.first_name} ${user.last_name} se ha Eliminado`)
     
   }
   
@@ -54,7 +54,7 @@ function App() {
         closeModal={closeModal}
       />}
       <div className='addUser-button-container'>
-        <h2>Users List</h2>
+        <h2 className='title'>Users List</h2>
         <button onClick={()=>setShowModal(true)} className="addUser-button">Agregar Usuario</button>
       </div>
 
